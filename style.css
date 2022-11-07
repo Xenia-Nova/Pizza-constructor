@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  font-size: 20px;
+  color: #424242;
+  font-family: 'Roboto', sans-serif;
+  user-select: none;
+}
+
+.container {
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+#img {
+  width: 600px;
+  height: 600px;
+}
+
+#imgPizza,
+#order,
+#controlPanel {
+  box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  border-radius: 8px;
+}
+#imgPizza {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+}
+
+#viewOrder{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#order{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+#orderList {
+  list-style: none;
+  flex: 1;
+}
+#orderList > li {
+  cursor: pointer;
+}
+
+#price {
+  font-weight: 700;
+}
+
+#controlPanel {
+  display: flex;
+  justify-content: space-around;
+}
+
+#controlPanel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#controlPanel ul li {
+  cursor: pointer;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+#controlPanel ul li:hover:not(.checked) {
+  box-shadow: 0 0 10px 2px rgba(34, 60, 80, 0.2) inset;
+}
+#controlPanel ul .checked {
+  color: #43a047;
+  box-shadow: 0 0 10px 2px rgba(165, 214, 167, 1) inset;
+}
+
+.modalWrapper {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: absolute;
+  text-align: center;
+  font-size: 60px;
+  padding: 80px;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  width: 70%;
+  height: 50%;
+  background: #fff;
+}
+
+#orderButton {
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #ff9800;
+  border: 1px solid #ff9800;
+  background-color: transparent;
+}
+
+#orderButton:disabled {
+  color: gray;
+  border: 1px solid gray;
+  cursor: default;
+}
+
+#orderButton:hover {
+  box-shadow: 0 1px 10px 1px rgba(255, 152, 0, 0.4);
+}
+#orderButton:disabled:hover {
+  box-shadow: none;
+}
+
+#closeButton {
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  background-color: #ff9800;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+
+#closeButton:hover {
+  box-shadow: 0 4px 10px 2px rgba(34, 60, 80, 0.2);
+}
